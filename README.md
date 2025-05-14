@@ -1,3 +1,5 @@
+# I'll rewrite this to Async and V2 on the weekend ( 15-17.5.2025 )
+
 # pipedrive-python
 ![](https://img.shields.io/badge/version-1.2.3-success) ![](https://img.shields.io/badge/Python-3.8%20|%203.9%20|%203.10%20|%203.11-4B8BBE?logo=python&logoColor=white)   
 *pipedrive-python* is an API wrapper for [Pipedrive](https://www.pipedrive.com/) written in Python.
