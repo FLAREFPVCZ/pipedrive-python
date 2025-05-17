@@ -4,49 +4,64 @@ class BaseError(Exception):
         self.response = response
 
 
-class BadRequestError(BaseError):
+class ApiError(BaseError):
+    """Base class for all API errors"""
     pass
 
 
-class UnauthorizedError(BaseError):
+class ConnectionError(ApiError):
+    """Error when connecting to the API"""
     pass
 
 
-class ForbiddenError(BaseError):
+class TimeoutError(ApiError):
+    """Request timed out"""
     pass
 
 
-class NotFoundError(BaseError):
+class BadRequestError(ApiError):
     pass
 
 
-class GoneError(BaseError):
+class UnauthorizedError(ApiError):
     pass
 
 
-class UnsupportedMediaTypeError(BaseError):
+class ForbiddenError(ApiError):
     pass
 
 
-class UnprocessableEntityError(BaseError):
+class NotFoundError(ApiError):
     pass
 
 
-class TooManyRequestsError(BaseError):
+class GoneError(ApiError):
     pass
 
 
-class InternalServerError(BaseError):
+class UnsupportedMediaTypeError(ApiError):
     pass
 
 
-class NotImplementedError(BaseError):
+class UnprocessableEntityError(ApiError):
     pass
 
 
-class ServiceUnavailableError(BaseError):
+class TooManyRequestsError(ApiError):
     pass
 
 
-class UnknownError(BaseError):
+class InternalServerError(ApiError):
+    pass
+
+
+class NotImplementedError(ApiError):
+    pass
+
+
+class ServiceUnavailableError(ApiError):
+    pass
+
+
+class UnknownError(ApiError):
     pass
